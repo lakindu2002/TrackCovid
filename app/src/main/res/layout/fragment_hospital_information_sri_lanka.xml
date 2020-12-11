@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/hospital_list_swipe"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HospitalInformationSriLanka">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/header_hospitalList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#2196F3"
+            tools:ignore="NotSibling">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/covid_one_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="4dp"
+                android:layout_toEndOf="@+id/header_picture_list"
+                android:fontFamily="sans-serif-medium"
+                android:text="Coronavirus (COVID-19)"
+                android:textColor="@android:color/white"
+                android:textSize="24dp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/covid_two_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/covid_one_list"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="20dp"
+                android:layout_toEndOf="@+id/header_picture_list"
+                android:fontFamily="sans-serif-medium"
+                android:text="Hospital Data"
+                android:textColor="@android:color/white"
+                android:textSize="22dp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/covid_three_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/covid_two_list"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="20dp"
+                android:layout_toEndOf="@+id/header_picture_list"
+                android:fontFamily="sans-serif-medium"
+                android:text="In Sri Lanka"
+                android:textColor="@android:color/white"
+                android:textSize="20dp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/last_updated_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/header_picture_list"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Last Updated: "
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="17dp" />
+
+            <ImageView
+                android:id="@+id/header_picture_list"
+                android:layout_width="100dp"
+                android:layout_height="130dp"
+                android:layout_marginStart="15dp"
+                android:padding="5dp"
+                android:src="@drawable/covid_pic" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/search_list_rel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/header_hospitalList"
+            android:layout_margin="5dp"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <SearchView
+                    android:id="@+id/search_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:iconifiedByDefault="false"
+                    android:queryHint="Enter Hospital Name" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/toggle_chart"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:text="View Chart"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/recycler_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/search_list_rel">
+
+            <FrameLayout
+                android:id="@+id/frame_hospital"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/hospital_reycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </FrameLayout>
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/loading_list"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

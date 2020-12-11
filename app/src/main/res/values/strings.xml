@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Track COVID</string>
+    <string name="home_page">Sri Lankan Statistics</string>
+    <string name="global_page">Global Statistics</string>
+    <string name="hospital_page">Hospital Information</string>
+    <string name="chart_pie_title">Pie Chart</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
