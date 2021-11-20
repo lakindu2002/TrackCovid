@@ -1,4 +1,7 @@
 # TrackCovid
+
+This repository is owned and maintained by Lakindu Hewawasam.
+
 Android Application with Java integrated to Sri Lankan COVID API to fetch and display data
 
 ## API Used
